@@ -1,22 +1,37 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
 }
 
 body {
-    overflow: hidden;
+    margin: 0;
     font-family: 'Muli', sans-serif;
 }
-.intro{
+
+.intro-container{
+    height: 50vh;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
+    background-color: red;
+}
+
+.intro-container::before {
+    content: "Read this -";
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
 }
 
 .intro a {
     margin: 5px;
+}
+.links-container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: royalblue;
 }
