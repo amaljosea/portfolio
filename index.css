@@ -1,3 +1,5 @@
+/* -------- common -------- */
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -8,30 +10,61 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
+
+/* -------- intro -------- */
+
 .intro-container{
     height: 50vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     background-color: red;
 }
 
+.intro-text-container{
+    margin-left: 40px;
+}
+
 .intro-container::before {
-    content: "Read this -";
+    content: "";
     background-color: yellow;
-    color: red;
-    font-weight: bold;
+    height: 25vh;
+    width: 30px;
+    position: absolute;
 }
 
 .intro a {
     margin: 5px;
 }
+
+/* -------- links -------- */
+
 .links-container{
     height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
     background-color: royalblue;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links-text-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links-text-container::after {
+    content: "";
+    background-color: yellow;
+    height: 25vh;
+    width: 30px;
+    position: absolute;
+}
+
+.links-link-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
 }
