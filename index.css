@@ -51,6 +51,7 @@ body {
     align-items: flex-end;
     flex-direction: column;
     justify-content: center;
+    margin-right: 40px;
 }
 
 .links-text-container::after {
@@ -59,12 +60,5 @@ body {
     height: 25vh;
     width: 30px;
     position: absolute;
-}
-
-.links-link-container {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 40px;
+    right: 0;
 }
