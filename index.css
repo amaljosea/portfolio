@@ -10,7 +10,9 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
-
+.page-1 {
+    background: linear-gradient(216deg, rgba(255,255,255,1) 0%, rgba(213,223,236,1) 100%);
+}
 /* -------- intro -------- */
 
 .intro-container{
@@ -18,16 +20,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
 }
 
 .intro-text-container{
     margin-left: 40px;
+    color: #254e86;
+}
+
+.intro-text-container h1 {
+    font-size: 50px;
+    margin: 0;
 }
 
 .intro-container::before {
     content: "";
-    background-color: yellow;
+    background-color: #254e86;
     height: 25vh;
     width: 30px;
     position: absolute;
@@ -41,7 +48,6 @@ body {
 
 .links-container{
     height: 50vh;
-    background-color: royalblue;
     display: flex;
     justify-content: flex-end;
 }
@@ -56,9 +62,22 @@ body {
 
 .links-text-container::after {
     content: "";
-    background-color: yellow;
+    background-color: #254e86;
     height: 25vh;
     width: 30px;
     position: absolute;
     right: 0;
 }
+
+.links-text-container a {
+    margin: 5px;
+    font-size: 40px;
+    color: #808181;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links-text-container a:hover {
+    color: #919191;
+}
+
