@@ -36,13 +36,14 @@
     <div class="container fadeIn">
       <section class="page-1">
         <div class="intro-container">
+          <h1 id="hover-link-display" class="intro-container-hover-text fade"></h1>
           <div class="intro-text-container">
             <h1>amal jose</h1>
             <h1>front end engineer</h1>
           </div>
         </div>
         <div class="links-container">
-          <div class="links-text-container">
+          <div class="links-text-container" id="hover-links-container">
             <a
               target="_blank"
               rel="noopener"
@@ -72,4 +73,25 @@
       </section>
     </div>
   </body>
+  <script>
+    const hoverDisplay = document.getElementById("hover-link-display");
+    const hoverLinks = document.getElementById("hover-links-container")
+      .children;
+
+    const showCurrentHoveredLink = (text) => {
+      hoverDisplay.innerText = text;
+      hoverDisplay.classList.remove("fade");
+    };
+
+    const hideCurrentHoveredLink = () => {
+      hoverDisplay.classList.add("fade");
+    };
+
+    Array.from(hoverLinks).forEach((hoverLink) => {
+      hoverLink.onmouseover = () => {
+        showCurrentHoveredLink(hoverLink.innerText);
+      };
+      hoverLink.onmouseleave = hideCurrentHoveredLink;
+    });
+  </script>
 </html>

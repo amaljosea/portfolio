@@ -45,6 +45,7 @@ body {
 .intro-text-container {
   margin-left: 40px;
   color: #254e86;
+  position: relative;
 }
 
 .intro-text-container h1 {
@@ -62,6 +63,19 @@ body {
 
 .intro a {
   margin: 5px;
+}
+
+.intro-container-hover-text {
+  position: absolute;
+  left: 50%;
+  font-size: 281px;
+  color: #edf2f7;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.intro-container-hover-text.fade {
+  opacity: 0;
 }
 
 /* -------- links -------- */
