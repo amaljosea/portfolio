@@ -78,24 +78,27 @@
     </div>
   </body>
   <script>
-    const hoverDisplay = document.getElementById("hover-link-display");
-    const hoverLinks = document.getElementById("hover-links-container")
-      .children;
+    (() => {
+      if (window.innerWidth < 1000) return;
+      const hoverDisplay = document.getElementById("hover-link-display");
+      const hoverLinks = document.getElementById("hover-links-container")
+        .children;
 
-    const showCurrentHoveredLink = (text) => {
-      hoverDisplay.innerText = text;
-      hoverDisplay.classList.remove("fade");
-    };
-
-    const hideCurrentHoveredLink = () => {
-      hoverDisplay.classList.add("fade");
-    };
-
-    Array.from(hoverLinks).forEach((hoverLink) => {
-      hoverLink.onmouseover = () => {
-        showCurrentHoveredLink(hoverLink.innerText);
+      const showCurrentHoveredLink = (text) => {
+        hoverDisplay.innerText = text;
+        hoverDisplay.classList.remove("fade");
       };
-      hoverLink.onmouseleave = hideCurrentHoveredLink;
-    });
+
+      const hideCurrentHoveredLink = () => {
+        hoverDisplay.classList.add("fade");
+      };
+
+      Array.from(hoverLinks).forEach((hoverLink) => {
+        hoverLink.onmouseover = () => {
+          showCurrentHoveredLink(hoverLink.innerText);
+        };
+        hoverLink.onmouseleave = hideCurrentHoveredLink;
+      });
+    })();
   </script>
 </html>
